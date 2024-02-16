@@ -25,7 +25,9 @@ After that, you should be able to access the application in the address:
 [http://localhost:3000/](http://localhost:3000/)
 
 #
-The project is integrated with Stripe, so you will need to have an account to use 100% of this project
+The project is integrated with Stripe, so you will need an account to use 100% of this project
+<br/>
+[Stripe 🔗](https://stripe.com/br)
 #
 
 # Preview
