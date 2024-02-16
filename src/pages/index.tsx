@@ -1,5 +1,6 @@
 import { HomeContainer, Product } from '@/styles/pages/home'
 import Image from 'next/image'
+import Head from 'next/head'
 import Link from 'next/link'
 
 import { useKeenSlider } from 'keen-slider/react'
@@ -28,6 +29,10 @@ export default function Home({ products }: HomeProps) {
 
   return (
     <>
+      <Head>
+        <title>Home | Ignite Shop</title>
+      </Head>
+
       <HomeContainer ref={sliderRef} className="keen-slider">
         {products.map((product) => {
           return (
