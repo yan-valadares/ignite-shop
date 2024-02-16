@@ -39,13 +39,7 @@ export default function Product({ product }: ProductProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [
-      {
-        params: {
-          name: '',
-        },
-      },
-    ],
+    paths: [],
     fallback: 'blocking',
   }
 }
@@ -62,11 +56,14 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
 
   const price = product.default_price as Stripe.Price
 
+  console.log(product.description)
+
   return {
     props: {
       product: {
         id: product.id,
         name: product.name,
+        description: product.description,
         imageUrl: product.images[0],
         price: new Intl.NumberFormat('pt-BR', {
           style: 'currency',
